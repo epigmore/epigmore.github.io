@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Octopress安装配置 | ePigmore</title>
+  <title>第 2 页 | ePigmore</title>
   <meta name="author" content="ePig">
   
   <meta name="description" content="多看，多说，多做～">
@@ -11,7 +11,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="Octopress安装配置"/>
+  
   <meta property="og:site_name" content="ePigmore"/>
 
   
@@ -48,7 +48,8 @@
 </nav>
 <div class="clearfix"></div></header>
   <div id="content" class="inner">
-    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+    <div id="main-col" class="alignleft"><div id="wrapper">
+  <article class="post">
   
   <div class="post-content">
     <header>
@@ -58,7 +59,7 @@
       
       
   
-    <h1 class="title">Octopress安装配置</h1>
+    <h1 class="title"><a href="/2015/11/20/Octopress安装配置/">Octopress安装配置</a></h1>
   
 
     </header>
@@ -90,19 +91,7 @@
     <footer>
       
         
-  
-  <div class="categories">
-    <a href="/categories/程序开发/">程序开发</a>
-  </div>
-
         
-  
-  <div class="tags">
-    <a href="/tags/Octopress/">Octopress</a>
-  </div>
-
-        <div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone"></a><a href="#" class="bds_tsina" data-cmd="tsina"></a><a href="#" class="bds_tqq" data-cmd="tqq"></a><a href="#" class="bds_renren" data-cmd="renren"></a><a href="#" class="bds_weixin" data-cmd="weixin"></a></div>
-<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"16"},"share":{},"image":{"viewList":["qzone","tsina","tqq","renren","weixin"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
       
       <div class="clearfix"></div>
     </footer>
@@ -111,36 +100,76 @@
 
 
 
-<nav id="pagination" >
-    
-    <a href="/2015/11/21/Yeoman学习笔记/" class="alignleft prev" >上一页</a>
-    
-    
-    <a href="/2015/11/19/Hexo安装配置/" class="alignright next" >下一页</a>
-    
-    <div class="clearfix"></div>
-</nav>
 
-<section id="comment">
-  <!-- 多说评论框 start -->
-  <div class="ds-thread" data-thread-key="2015/11/20/Octopress安装配置/" data-title="Octopress安装配置" data-url="http://yoursite.com/2015/11/20/Octopress安装配置/"></div>
-<!-- 多说评论框 end -->
-<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-<script type="text/javascript">
-var duoshuoQuery = {short_name:"epigmore"};
-  (function() {
-    var ds = document.createElement('script');
-    ds.type = 'text/javascript';ds.async = true;
-    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-    ds.charset = 'UTF-8';
-    (document.getElementsByTagName('head')[0] 
-     || document.getElementsByTagName('body')[0]).appendChild(ds);
-  })();
-  </script>
-<!-- 多说公共JS代码 end -->
-</section>
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2015-11-19T15:37:18.000Z"><a href="/2015/11/19/Hexo安装配置/">2015-11-19</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2015/11/19/Hexo安装配置/">Hexo安装配置</a></h1>
+  
 
-</div></div>
+    </header>
+    <div class="entry">
+      
+        <p>Mac下配置和在GitHub部署Hexo博客系统</p>
+<p>关于<a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>!<br>Hexo是一个基于NodeJS的博客生成系统！你能通过<a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>站点获取Hexo项目</p>
+<h2 id="部署Hexo本地环境">部署Hexo本地环境</h2><h3 id="登陆github">登陆github</h3><p>新建仓库命名为<br>username.github.io<br>这样做的创建的仓库是Github Pages站点<br>仓库中master分支里的文件将会被用来生成 Github Pages 站点</p>
+<p>不同于个人和组织github提供的还有项目的站点<br>站点文件存放在项目本身仓库的 gh-pages 分支中</p>
+<h3 id="安装NodeJS">安装NodeJS</h3><p>你可以同过NodeJS官方网站获取安装包进行安装</p>
+<h3 id="安装Hexo">安装Hexo</h3><p>建议全局安装</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo</span><br></pre></td></tr></table></figure>
+<h3 id="Hexo环境配置">Hexo环境配置</h3><p>创建hexo的目录<br>我创建的hexo目录，所有以下操作都是基于工作目录hexo前提下</p>
+<p>进入hexo目录<br>初始化hexo工程</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init</span><br></pre></td></tr></table></figure>
+<p>当然你也可以指定目录将工程初始化到指定的目录中</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init &lt;folder&gt;</span><br></pre></td></tr></table></figure>
+<p>安装工程依赖项<br>到工程目录中</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
+<p>接着执行下面命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g </span><br><span class="line">$ hexo s</span><br></pre></td></tr></table></figure>
+<p>在浏览器中打开<a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a><br>看到效果了吧</p>
+<h2 id="部署到GitHub">部署到GitHub</h2><p>首先你需要配置GitHub的SSH登陆信息，动手通过网上找配置方法</p>
+<p>你需要在hexo项目根目录下的_config.yml文件中找到</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="comment">## Docs: http://hexo.io/docs/deployment.html</span></span><br><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>:</span><br></pre></td></tr></table></figure>
+<p>修改为</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="comment">## Docs: http://hexo.io/docs/deployment.html</span></span><br><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repository: git@github.com:username/username.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+<p>执行</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g</span><br><span class="line">$ hexo d</span><br></pre></td></tr></table></figure>
+<p>如果出现错误Error github not found<br>执行</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+<p>再次执行$hexo g和$hexo d命令</p>
+<p>在Mac和Linux下命令执行过程中可能需要root权限</p>
+<p>hexo常用命令<br>hexo g 启动生成<br>hexo s 启动本地服务<br>hexo d 发布到github</p>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+
+<nav id="pagination">
+  
+    <a href="/" class="alignleft prev">上一页</a>
+  
+  
+  <div class="clearfix"></div>
+</nav></div></div>
     <aside id="sidebar" class="alignright">
   <div class="search">
   <form action="//google.com/search" method="get" accept-charset="utf-8">

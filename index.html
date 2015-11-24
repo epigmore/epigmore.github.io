@@ -55,6 +55,89 @@
     <header>
       
         <div class="icon"></div>
+        <time datetime="2015-11-24T12:45:23.000Z"><a href="/2015/11/24/node-express-ejs协作开发网页/">2015-11-24</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2015/11/24/node-express-ejs协作开发网页/">node_express_ejs协作开发网页</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <h2 id="介绍">介绍</h2><p>Node.js是一个基于Chrome JavaScript运行时建立的平台， 用于方便地搭建响应速度快、易于扩展的网络应用。Express 是一个基于 Node.js 平台的极简、灵活的 web 应用开发框架，它提供一系列强大的特性，帮助你创建各种 Web 和移动设备应用。EJS是一个JavaScript模板库，用来从JSON数据中生成HTML字符串。</p>
+<h2 id="安装">安装</h2><p>首先假定你已经安装了 Node.js，接下来为你的应用创建一个目录，然后进入此目录并将其作为当前工作目录。</p>
+<p>使用Express应用生成器可以快速创建应用程序骨架，可以通过以下命令安装Express应用生成器</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install express-generator -g</span><br></pre></td></tr></table></figure>
+<p>通过以下命令生成应用骨架</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ express <span class="operator">-e</span> ejs_demo</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>-e是添加ejs模版支持默认是jade,当然你也可以手动安装ejs模版</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install ejs --save</span><br></pre></td></tr></table></figure>
+<p>通过 npm install 命令安装依赖。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> ejs_demo</span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
+<p>启动这个应用（MacOS 或 Linux 平台）：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ DEBUG=myapp npm start</span><br></pre></td></tr></table></figure>
+<p>Windows 平台使用如下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="built_in">set</span> DEBUG=myapp &amp; npm start</span><br></pre></td></tr></table></figure>
+<h2 id="测试">测试</h2><p>然后在浏览器中打开 <a href="http://localhost:3000/" target="_blank" rel="external">http://localhost:3000/</a> 网址就可以看到这个应用了。</p>
+<h2 id="总结">总结</h2><p>和 Express 兼容的模板引擎，比如 Jade，通过 res.render() 调用其导出方法 __express(filePath, options, callback) 渲染模板。</p>
+<p>有一些模板引擎不遵循这种约定，Consolidate.js 能将 Node 中所有流行的模板引擎映射为这种约定，这样就可以和 Express 无缝衔接。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">app.set(<span class="string">'views'</span>, <span class="string">'./views'</span>); //views, 放模板文件的目录</span><br><span class="line">app.set(<span class="string">'view engine'</span>, <span class="string">'ejs'</span>); //view engine, 模板引擎</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2015-11-24T11:53:12.000Z"><a href="/2015/11/24/Python安装配置/">2015-11-24</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2015/11/24/Python安装配置/">Python安装配置</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <h2 id="惭愧，本人Mac环境，自带python环境，但是setup_tool安装一直没有成功，等以后再补上吧。">惭愧，本人Mac环境，自带python环境，但是setup_tool安装一直没有成功，等以后再补上吧。</h2>
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
         <time datetime="2015-11-23T03:38:01.000Z"><a href="/2015/11/23/比尔盖茨哈弗演讲/">2015-11-23</a></time>
       
       
@@ -293,122 +376,11 @@
 
 
 
-  <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2015-11-20T12:01:31.000Z"><a href="/2015/11/20/Octopress安装配置/">2015-11-20</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/2015/11/20/Octopress安装配置/">Octopress安装配置</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <p>MAC OS X 部署Octopress</p>
-<p>1、安装xcode<br>xcode中带有git<br>OS X自带ruby<br>检查ruby版本<br>如果版本过低需要安装RVM更新ruby</p>
-<p>2、使用git克隆octopress项目<br>git clone git://github.com/imathis/octopress.git octopress</p>
-<p>3、环境配置<br>安装bundle<br>gem install bundle<br>有时需要使用sudo获取root权限<br>如果安装无法从<a href="https://rubygems.org/源下载切换到淘宝的镜像源" target="_blank" rel="external">https://rubygems.org/源下载切换到淘宝的镜像源</a><br>gem sources –add <a href="https://ruby.taobao.org/" target="_blank" rel="external">https://ruby.taobao.org/</a> –remove <a href="https://rubygems.org/" target="_blank" rel="external">https://rubygems.org/</a></p>
-<p>进入octopress目录<br>安装依赖<br>bundle install</p>
-<p>如果出现<br>An error occurred while installing rake (10.4.2), and Bundler cannot continue.<br>Make sure that <code>gem install rake -v &#39;10.4.2&#39;</code> succeeds before bundling.<br>错误</p>
-<p>执行<br>gem install rake -v ‘10.4.2’<br>升级安装rake</p>
-<p>如果出现<br>Make sure that <code>gem install RedCloth -v &#39;4.2.9&#39;</code> succeeds before bundling.<br>错误</p>
-<p>执行<br>gem install RedCloth -v ‘4.2.9’或<br>gem install RedCloth -v<br>单独安装RedCloth</p>
-<p>若出现<br>ERROR:  Error installing RedCloth:<br>ERROR: Failed to build gem native extension.<br>Building has failed.<br>的错误</p>
-<p>执行<br>xcode-select –install<br>重新安装xcode命令行工具</p>
-<p>最后执行<br>rake install<br>完成</p>
-<p>4、部署到github</p>
-<p>需要配置SSH<br>在local目录查看是否有 cd ~/.ssh/id_rsa.pub<br>若有先备份<br>然后执行<br>ssh-keygen -t rsa -C “username@mail.com”<br>生成key</p>
-<p>登陆github网站进入设置ssh keys</p>
-<p>邮箱名称为title<br>id_rsa.pub内容为key</p>
-<p>测试：ssh git@github.com<br>若出现<br>You’ve successfully authenticated, but GitHub does not provide shell access<br>Connection to github.com closed.<br>证明ssh登陆git通过</p>
-<p>git config –global user.name “realname”<br>git config –global user.mail “username@mail.com”</p>
-<p>至此ssh配置全部完成，下面开始发布网站到github上<br>rake setup_github_pages //配置github项目地址 接下来会提示输入url<br>rake generate  //本地生成<br>rake preview   //本地预览默认4000端口<br>rake deploy   //发布到github</p>
-<p>访问 _config.yml文件中生成的url后面的地址可以查看最终效果<br>最后将source文件内容提交的github用来保存源码，便于以后写博客</p>
-
-      
-    </div>
-    <footer>
-      
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
-  <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2015-11-19T15:37:18.000Z"><a href="/2015/11/19/Hexo安装配置/">2015-11-19</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/2015/11/19/Hexo安装配置/">Hexo安装配置</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <p>Mac下配置和在GitHub部署Hexo博客系统</p>
-<p>关于<a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>!<br>Hexo是一个基于NodeJS的博客生成系统！你能通过<a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>站点获取Hexo项目</p>
-<h2 id="部署Hexo本地环境">部署Hexo本地环境</h2><h3 id="登陆github">登陆github</h3><p>新建仓库命名为<br>username.github.io<br>这样做的创建的仓库是Github Pages站点<br>仓库中master分支里的文件将会被用来生成 Github Pages 站点</p>
-<p>不同于个人和组织github提供的还有项目的站点<br>站点文件存放在项目本身仓库的 gh-pages 分支中</p>
-<h3 id="安装NodeJS">安装NodeJS</h3><p>你可以同过NodeJS官方网站获取安装包进行安装</p>
-<h3 id="安装Hexo">安装Hexo</h3><p>建议全局安装</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo</span><br></pre></td></tr></table></figure>
-<h3 id="Hexo环境配置">Hexo环境配置</h3><p>创建hexo的目录<br>我创建的hexo目录，所有以下操作都是基于工作目录hexo前提下</p>
-<p>进入hexo目录<br>初始化hexo工程</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init</span><br></pre></td></tr></table></figure>
-<p>当然你也可以指定目录将工程初始化到指定的目录中</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init &lt;folder&gt;</span><br></pre></td></tr></table></figure>
-<p>安装工程依赖项<br>到工程目录中</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
-<p>接着执行下面命令</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g </span><br><span class="line">$ hexo s</span><br></pre></td></tr></table></figure>
-<p>在浏览器中打开<a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a><br>看到效果了吧</p>
-<h2 id="部署到GitHub">部署到GitHub</h2><p>首先你需要配置GitHub的SSH登陆信息，动手通过网上找配置方法</p>
-<p>你需要在hexo项目根目录下的_config.yml文件中找到</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="comment">## Docs: http://hexo.io/docs/deployment.html</span></span><br><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>:</span><br></pre></td></tr></table></figure>
-<p>修改为</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="comment">## Docs: http://hexo.io/docs/deployment.html</span></span><br><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repository: git@github.com:username/username.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
-<p>执行</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g</span><br><span class="line">$ hexo d</span><br></pre></td></tr></table></figure>
-<p>如果出现错误Error github not found<br>执行</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-<p>再次执行$hexo g和$hexo d命令</p>
-<p>在Mac和Linux下命令执行过程中可能需要root权限</p>
-<p>hexo常用命令<br>hexo g 启动生成<br>hexo s 启动本地服务<br>hexo d 发布到github</p>
-
-      
-    </div>
-    <footer>
-      
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
 
 <nav id="pagination">
   
+  
+    <a href="/page/2/" class="alignright next">下一页</a>
   
   <div class="clearfix"></div>
 </nav></div></div>
@@ -427,7 +399,7 @@
   
     <li><a href="/categories/操作系统/">操作系统</a><small>1</small></li>
   
-    <li><a href="/categories/程序开发/">程序开发</a><small>3</small></li>
+    <li><a href="/categories/程序开发/">程序开发</a><small>5</small></li>
   
     <li><a href="/categories/随笔/">随笔</a><small>1</small></li>
   
@@ -439,7 +411,7 @@
 <div class="widget tagcloud">
   <h3 class="title">标签云</h3>
   <div class="entry">
-    <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Mac/" style="font-size: 10px;">Mac</a> <a href="/tags/Octopress/" style="font-size: 10px;">Octopress</a> <a href="/tags/Yeoman/" style="font-size: 10px;">Yeoman</a> <a href="/tags/演讲/" style="font-size: 10px;">演讲</a>
+    <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Mac/" style="font-size: 10px;">Mac</a> <a href="/tags/NodeJS/" style="font-size: 10px;">NodeJS</a> <a href="/tags/Octopress/" style="font-size: 10px;">Octopress</a> <a href="/tags/Yeoman/" style="font-size: 10px;">Yeoman</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/演讲/" style="font-size: 10px;">演讲</a>
   </div>
 </div>
 

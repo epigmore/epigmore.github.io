@@ -55,6 +55,49 @@
     <header>
       
         <div class="icon"></div>
+        <time datetime="2015-11-26T11:54:50.000Z"><a href="/2015/11/26/Mac下JDK和Maven的安装配置/">2015-11-26</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2015/11/26/Mac下JDK和Maven的安装配置/">Mac下JDK和Maven的安装配置</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <h3 id="从Oracle官网下载最新版本JDK">从Oracle官网下载最新版本JDK</h3><p>选择Mac OSX版点击安装，安装完成后在终端中输入</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ java -version</span><br></pre></td></tr></table></figure>
+<p>出现JDK版本号说明安装成功。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vim .bash_profile</span><br></pre></td></tr></table></figure>
+<p>JDK默认安装路径在/Library/Java/JavaVirtualMachines/目录下<br>接下来需要配置JAVA_HOME变量</p>
+<blockquote>
+<p>export JAVA_HOME=”/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home”</p>
+</blockquote>
+<h3 id="安装Maven">安装Maven</h3><p>从apache官网选择需要的Maven版本下载<br>解压到~/Library/Maven</p>
+<p>配置Maven环境变量<br>export M2_HOME=”~/Library/Maven/apache-maven-3”<br>export PATH=$PATH:$M2_HOME/bin</p>
+<h3 id="测试">测试</h3><p>现在可以创建一个Maven项目进行测试。。。</p>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
         <time datetime="2015-11-25T11:09:30.000Z"><a href="/2015/11/25/Oracle通过分区表曲线救国/">2015-11-25</a></time>
       
       
@@ -311,54 +354,6 @@
 
 
 
-  <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2015-11-22T15:00:10.000Z"><a href="/2015/11/22/Mac环境变量配置/">2015-11-22</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/2015/11/22/Mac环境变量配置/">Mac环境变量配置</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <h2 id="介绍">介绍</h2><p>mac 一般使用bash作为默认shell</p>
-<p>Mac系统的环境变量，加载顺序为：<br>/etc/profile /etc/paths ~/.bash_profile ~/.bash_login ~/.profile ~/.bashrc<br>当然/etc/profile和/etc/paths是系统级别的，系统启动就会加载，后面几个是当前用户级的环境变量。后面3个按照从前往后的顺序读取，如果~/.bash_profile文件存在，则后面的几个文件就会被忽略不读了，如果~/.bash_profile文件不存在，才会以此类推读取后面的文件。~/.bashrc没有上述规则，它是bash shell打开的时候载入的。</p>
-<p>如果没特殊说明,设置PATH的语法都为：<br>——————————————————-</p>
-<p>#中间用冒号隔开<br>     export PATH=$PATH:<path 1=""></path>:<path 2=""></path>:<path 3=""></path>:——:<path n=""></path></p>
-<h2 id="（一）全局设置">（一）全局设置</h2><p>下面的几个文件设置是全局的，修改时需要root权限</p>
-<p>1）/etc/paths （全局建议修改这个文件 ）<br>编辑 paths，将环境变量添加到 paths文件中 ，一行一个路径<br>Hint：输入环境变量时，不用一个一个地输入，只要拖动文件夹到 Terminal 里就可以了。</p>
-<p>2）/etc/profile （建议不修改这个文件 ）<br>全局（公有）配置，不管是哪个用户，登录时都会读取该文件。</p>
-<p>3）/etc/bashrc （一般在这个文件中添加系统级环境变量）<br>全局（公有）配置，bash shell执行时，不管是何种方式，都会读取此文件。</p>
-<p>4）<br>1.创建一个文件：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo touch /etc/paths.d/mysql</span><br></pre></td></tr></table></figure>
-<p>2.用 vim 打开这个文件（如果是以 open -t 的方式打开，则不允许编辑）：<br>sudo vim /etc/paths.d/mysql<br>3.编辑该文件，键入路径并保存（关闭该 Terminal 窗口并重新打开一个，就能使用 mysql 命令了）<br>/usr/local/mysql/bin<br>据说，这样可以自己生成新的文件，不用把变量全都放到 paths 一个文件里，方便管理。</p>
-<h2 id="（二）单个用户设置">（二）单个用户设置</h2><p>1）~/.bash_profile （任意一个文件中添加用户级环境变量）<br>（注：Linux 里面是 .bashrc 而 Mac 是 .bash_profile）<br>若bash shell是以login方式执行时，才会读取此文件。该文件仅仅执行一次!默认情况下,他设置一些环境变量<br>设置命令别名alias ll=’ls -la’<br>设置环境变量：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> PATH=/opt/<span class="built_in">local</span>/bin:/opt/<span class="built_in">local</span>/sbin:<span class="variable">$PATH</span></span><br></pre></td></tr></table></figure>
-<p>若找不到~/.bash_profile文件，可以自己手动创建一个</p>
-<p>2）~/.bashrc 同上</p>
-<p>如果想立刻生效，则可执行下面的语句：<br>$ source 相应的文件<br>一般环境变量更改后，重启后生效。</p>
-
-      
-    </div>
-    <footer>
-      
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
 
 <nav id="pagination">
   
@@ -382,7 +377,7 @@
   
     <li><a href="/categories/操作系统/">操作系统</a><small>1</small></li>
   
-    <li><a href="/categories/程序开发/">程序开发</a><small>6</small></li>
+    <li><a href="/categories/程序开发/">程序开发</a><small>7</small></li>
   
     <li><a href="/categories/随笔/">随笔</a><small>1</small></li>
   
@@ -394,7 +389,7 @@
 <div class="widget tagcloud">
   <h3 class="title">标签云</h3>
   <div class="entry">
-    <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Mac/" style="font-size: 10px;">Mac</a> <a href="/tags/NodeJS/" style="font-size: 10px;">NodeJS</a> <a href="/tags/Octopress/" style="font-size: 10px;">Octopress</a> <a href="/tags/Oracle/" style="font-size: 10px;">Oracle</a> <a href="/tags/Yeoman/" style="font-size: 10px;">Yeoman</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/演讲/" style="font-size: 10px;">演讲</a>
+    <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/JAVA/" style="font-size: 10px;">JAVA</a> <a href="/tags/Mac/" style="font-size: 10px;">Mac</a> <a href="/tags/NodeJS/" style="font-size: 10px;">NodeJS</a> <a href="/tags/Octopress/" style="font-size: 10px;">Octopress</a> <a href="/tags/Oracle/" style="font-size: 10px;">Oracle</a> <a href="/tags/Yeoman/" style="font-size: 10px;">Yeoman</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/演讲/" style="font-size: 10px;">演讲</a>
   </div>
 </div>
 

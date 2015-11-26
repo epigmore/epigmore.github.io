@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>关于 | ePigmore</title>
+  <title>Mac下JDK和Maven的安装配置 | ePigmore</title>
   <meta name="author" content="ePig">
   
   <meta name="description" content="多看，多说，多做～">
@@ -11,7 +11,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="关于"/>
+  <meta property="og:title" content="Mac下JDK和Maven的安装配置"/>
   <meta property="og:site_name" content="ePigmore"/>
 
   
@@ -48,27 +48,50 @@
 </nav>
 <div class="clearfix"></div></header>
   <div id="content" class="inner">
-    <div id="main-col" class="alignleft"><div id="wrapper"><article class="page">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
   
   <div class="post-content">
     <header>
       
+        <div class="icon"></div>
+        <time datetime="2015-11-26T11:54:50.000Z"><a href="/2015/11/26/Mac下JDK和Maven的安装配置/">2015-11-26</a></time>
+      
       
   
-    <h1 class="title">关于</h1>
+    <h1 class="title">Mac下JDK和Maven的安装配置</h1>
   
 
     </header>
     <div class="entry">
       
-        <p>正在建设。。。</p>
+        <h3 id="从Oracle官网下载最新版本JDK">从Oracle官网下载最新版本JDK</h3><p>选择Mac OSX版点击安装，安装完成后在终端中输入</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ java -version</span><br></pre></td></tr></table></figure>
+<p>出现JDK版本号说明安装成功。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vim .bash_profile</span><br></pre></td></tr></table></figure>
+<p>JDK默认安装路径在/Library/Java/JavaVirtualMachines/目录下<br>接下来需要配置JAVA_HOME变量</p>
+<blockquote>
+<p>export JAVA_HOME=”/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home”</p>
+</blockquote>
+<h3 id="安装Maven">安装Maven</h3><p>从apache官网选择需要的Maven版本下载<br>解压到~/Library/Maven</p>
+<p>配置Maven环境变量<br>export M2_HOME=”~/Library/Maven/apache-maven-3”<br>export PATH=$PATH:$M2_HOME/bin</p>
+<h3 id="测试">测试</h3><p>现在可以创建一个Maven项目进行测试。。。</p>
 
       
     </div>
     <footer>
       
         
+  
+  <div class="categories">
+    <a href="/categories/程序开发/">程序开发</a>
+  </div>
+
         
+  
+  <div class="tags">
+    <a href="/tags/JAVA/">JAVA</a>
+  </div>
+
         <div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone"></a><a href="#" class="bds_tsina" data-cmd="tsina"></a><a href="#" class="bds_tqq" data-cmd="tqq"></a><a href="#" class="bds_renren" data-cmd="renren"></a><a href="#" class="bds_weixin" data-cmd="weixin"></a></div>
 <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"16"},"share":{},"image":{"viewList":["qzone","tsina","tqq","renren","weixin"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
       
@@ -77,6 +100,34 @@
   </div>
 </article>
 
+
+
+<nav id="pagination" >
+    
+    
+    <a href="/2015/11/25/Oracle通过分区表曲线救国/" class="alignright next" >下一页</a>
+    
+    <div class="clearfix"></div>
+</nav>
+
+<section id="comment">
+  <!-- 多说评论框 start -->
+  <div class="ds-thread" data-thread-key="2015/11/26/Mac下JDK和Maven的安装配置/" data-title="Mac下JDK和Maven的安装配置" data-url="http://yoursite.com/2015/11/26/Mac下JDK和Maven的安装配置/"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"epigmore"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+  </script>
+<!-- 多说公共JS代码 end -->
+</section>
 
 </div></div>
     <aside id="sidebar" class="alignright">

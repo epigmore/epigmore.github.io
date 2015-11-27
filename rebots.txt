@@ -1,0 +1,2 @@
+Sitemap: http://epigmore.github.io/sitemap.xml
+Sitemap: http://epigmore.github.io/baidusitemap.xml
